@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: -100vh;
+            flex-direction: column;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #resultContainer {
+            width: 80%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="fetchUserData()">Fetch User Data</button>
+        <button onclick="fetchJobData()">Fetch Job Data</button>
+    </div>
+
+    <div id="resultContainer"></div>
+
+    <script>
+        function fetchUserData() {
+            fetch('fetchUserData.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('resultContainer').innerHTML = data;
+                });
+        }
+
+        function fetchJobData() {
+            fetch('fetchJobData.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('resultContainer').innerHTML = data;
+                });
+        }
+    </script>
+</body>
+</html>

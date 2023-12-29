@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+button[type=submit]{
+    width: 100px;
+    height: 50px;   
+    background-color: lightblue;
+    color: white;
+}
+button[type=submit]:hover{
+    background-color: blue;
+}
+.container {
+  border-radius: 5px;
+  background-color:lightblue;
+  padding: 20px;
+  width: 50%;
+  height: 590px;
+}
+</style>
+</head>
+<body>
+
+<center>
+<div class="container">
+    <h2>Contact Us</h2>
+    <form action="cont.php" method="post">
+    <label for="fname" >First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="city">City</label>
+    <select id="city" name="city">
+      <option value="guntur">Guntur</option>
+      <option value="hyderabad">Hyderabad</option>
+      <option value="banglure">Banglure</option>
+    </select>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <button type="submit" name="Submit">Login</button>
+  </form>
+</div>
+</center>
+</body>
+</html>

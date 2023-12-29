@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>REGISTRATION FORM</title>
+        <link rel="stylesheet" href="jregister.css" type="text/css">
+    </head>
+    <body onload='document.form1.text1.focus()'>
+    
+    <div class="main">
+        <div class="register">
+            <h1>REGISTER HERE</h1>
+            <!-- <p>Job Title: <?php echo $jobTitle; ?></p>
+            <p>Company Name: <?php echo $companyName; ?></p> -->
+            <frameset id="flag">
+                <center> 
+                <form method="post" name="form1" action="jregister.php">
+                <label>User Id:</label><br>
+                <input type="number" id="name" placeholder="enter your user name" name="user"><br>
+                <br>
+                <label>FIRST NAME:</label><br>
+                <input type="text" id="name" placeholder="enter your first name" name="fname"><br>
+                <br>
+                <label>LAST NAME</label><br>
+                <input type="text" id="name" placeholder="enter your last name" name="lname"><br>
+                <br>
+                <label>ENTER YOUR DATE OF THE BIRTH</label><br>
+                <input type="date" id="name" placeholder="enter date of birth here" name="dob"><br><br>
+                <span id="name174"></span>
+                
+                <div class="name1">
+                <label>ENTER GMAIL</label>
+                 <input type="text" name='text1' id="name" placeholder="enter your gmail" required><br><br>
+                
+                </div>
+                <label>ENTER MOBILE NUMBER</label><br>
+                <input type="number" id="name" placeholder="enter your mobile no" name="phnum"><br><br>
+                <label>ENTER GENDER</label><br>
+                <input type="radio" value="Male" id="male" name="gender">Male
+                <input type="radio" value="Female" id="female" name="gender">Female
+                <br>
+                <label>LANG KNOWN</label><br>
+                <input type="text" name="lang">
+                <br>
+                <label>ENTER SKILLS</label><br>
+                <input type="text" id="name" placeholder="enter your skills" name="skills"><br><br>
+                <label>ENTER EXPERIENCE</label><br>
+                <input type="text" id="name" placeholder="enter your experiene if fresher enter zero " name="expe"><br><br>
+                <label>UPLOAD YOUR CV FILE</label><br>
+                <input type="file" id="name" placeholder="UPLOAD YOUR CV FILE"><br><br>
+                 <class="submit"><input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/>
+                </form>
+                 </center>
+        </frameset>
+        </div>
+    </div>
+        <script>
+            function ValidateEmail(inputText)
+            {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(inputText.value.match(mailformat))
+            {
+            alert("Registration sucess !"); 
+            document.form1.text1.focus();
+            //let x = Math.floor((Math.random() * 1000) + 1);
+            //alert('your track id is   '+x);
+            return true;
+
+            }
+            else
+            {
+            alert("You have entered an invalid email address!");
+            document.form1.text1.focus();
+            return false;
+            }
+            }
+        </script>
+    </body>
+</html>

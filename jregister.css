@@ -1,0 +1,67 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-image:linear-gradient(rgba(0, 0, 11, 0.8),rgba(39, 39, 101, 0.8)),url("https://w0.peakpx.com/wallpaper/147/410/HD-wallpaper-hii-services-3d-mod-3d-modeling-3d.jpg");
+    backface-visibility: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    margin-top: 12%;
+}
+#flag
+{
+    border:25px;
+    border-color: white;
+}
+div.main
+{
+    width: 400px;
+    margin: 100px auto 0px auto;
+    border: 10;
+}
+h1
+{
+    text-align: center;
+    padding: 35px;
+}
+div.register
+{
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 20px;
+    margin: 20px;
+    color:white;
+    
+}
+label
+{
+    font-size: 20px;
+}
+input#name
+{
+    width:300px;
+    border-radius:10px;
+    padding:5px;
+}
+input#name1
+{
+    width:300px;
+    border-radius:10px;
+    padding:5px;
+}
+input#sai
+{
+    width:150px;
+    font-size: large;
+    cursor:pointer;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+}
+label,h1
+{
+    text-shadow: 5px;
+}
