@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <style>
-        /* styles.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -66,18 +65,15 @@ a:hover {
 <body>
 
 <?php
-// Start or resume the session
+
 session_start();
 
-// Check if the user is logged in, if not, redirect to the login page
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
 
-// Check if form is submitted for updating user data
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
-    // Update user data in the session
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['email'] = $_POST['email'];
 }
