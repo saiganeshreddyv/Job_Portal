@@ -16,11 +16,7 @@ if(isset($_POST['Submit'])) {
     $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-    // Generate a random 6-digit ID
     $random_user_id = mt_rand(100000, 999999);
-
-    // Insert user data along with the random ID
     $result = mysqli_query($conn, "INSERT INTO register (firstname, lastname, email, pass, user_id) VALUES ('$firstname', '$lastname', '$email', '$password', $random_user_id)");
 
     if ($result) {
