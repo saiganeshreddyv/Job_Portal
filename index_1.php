@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Posting</title>
-    <!--<link rel="stylesheet" href="styles.css">-->
+
     <style>
-        /* Reset some default styles */
     h1, h2, p, label, input, textarea, button {
         margin: 0;
         padding: 0;
@@ -88,7 +87,7 @@
         <label for="jobLocation">Job Location:</label>
         <input type="text" id="jobLocation" name="jobLocation" required>
 
-        <!-- ... (previous HTML code) ... -->
+
 
         <label for="jobDescription">Job Description:</label>
         <textarea id="jobDescription" name="jobDescription" required></textarea>
@@ -99,7 +98,6 @@
         <label for="experienceRequired">Experience Required (in years):</label>
         <input type="number" id="experienceRequired" name="experienceRequired" required>
 
-        <!-- Add more attributes here -->
 
         <button type="submit">Post Job</button>
     </form>
