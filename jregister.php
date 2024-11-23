@@ -9,8 +9,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-// $jobTitle = "";  // Replace with your actual method of getting job title
-// $companyName = "";  // Replace with your actual method of getting company name
+
 
 if (isset($_POST['submit'])) {   
     $user=$_POST['user'];   
@@ -29,7 +28,6 @@ if (isset($_POST['submit'])) {
     if ($result) {
         echo "Data added successfully.";
         
-        // Pass job title and company name as parameters in the URL
         header("Location: jregister.php?jobTitle=$jobTitle&companyName=$companyName");
         exit();
     } else {
@@ -37,8 +35,6 @@ if (isset($_POST['submit'])) {
     } 
 }
 ?>
-
-<!-- HTML code for displaying job title and company name -->
 <html>
     <head>
         <title>REGISTRATION FORM</title>
@@ -48,17 +44,12 @@ if (isset($_POST['submit'])) {
         <div class="main">
             <div class="register">
                 <h1>REGISTER HERE</h1>
-                <!-- Display job title and company name -->
                 <p>Job Title: <?php echo $jobTitle; ?></p>
                 <p>Company Name: <?php echo $companyName; ?></p>
-                <!-- Rest of your HTML code -->
                 <form method="post" name="form1" action="jregister.php">
-                    <!-- Your existing form fields -->
+
                 </form>
             </div>
         </div>
-        <script>
-            // Your existing JavaScript code
-        </script>
     </body>
 </html>
