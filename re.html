@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -43,11 +39,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 
         toggleIcon.addEventListener("click", function() {
             if (passwordBox.type === "password") {
-                passwordBox.type = "text"; // Show password
+                passwordBox.type = "text";
                 toggleIcon.classList.remove("fa-eye");
                 toggleIcon.classList.add("fa-eye-slash");
             } else {
-                passwordBox.type = "password"; // Hide password
+                passwordBox.type = "password"; 
                 toggleIcon.classList.remove("fa-eye-slash");
                 toggleIcon.classList.add("fa-eye");
             }
@@ -61,14 +57,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 
     registrationForm.addEventListener("submit", function(event) {
         let isValid = true;
-
-        // Validate first name
         if (!isValidName(firstnameField.value)) {
             alert("First name should not contain numbers.");
             isValid = false;
         }
 
-        // Validate last name
         if (!isValidName(lastnameField.value)) {
             if (isValid) {
                 alert("Last name should not contain numbers.");
@@ -76,7 +69,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             }
         }
 
-        // Validate email
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailField.value)) {
             if (isValid) {
@@ -85,7 +77,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             }
         }
 
-        // Validate password constraints
         if (!isValidPassword(passwordField.value)) {
             if (isValid) {
                 alert("Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.");
